@@ -1,0 +1,137 @@
+<div class="dashboard-con settings">
+	<form ng-submit="settingSubmit(account)">
+    	<div class="top-container">
+            <div class="col-md-12 col-xs-6 top-links">
+                <div class="top-links-container" ng-include="'templates/settings/common/top-links.html'"></div>     
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 form-content" ng-scrollbar rebuild-on-resize>
+        	<div class="col-md-6 subscription">
+            	<h2 class="section-title">ZULU Subscription</h2>
+                <div class="form-group ">
+                	<h4>Your subscription is currently <span>Past Due</span></h4>
+                    <label>Current Plan</label>
+                    <p>Team (Monthly)</p>
+                    <label>Practitioners	</label>
+                    <p>2 out of maximum 5 practitioners in use.</p>
+                    <label>Next Billing Date</label>
+                    <p>22 Sep 2015</p>
+                    <label>Monthly Fee</label>
+                    <p>$95 USD</p>
+                    <strong>You have not registered your credit card
+                    	<i class="ic info info-hover">
+                            <span>Adding your credit card will allow your subscription to continue at the end of 
+                            the free trial period.<br />We will not charge your credit card until the free trial 
+                            ends (except for any SMS credits you purchase).</span>
+                        </i>
+                    </strong>
+                    <a href="#">Update credit card details</a>
+                </div>
+                <div class="form-group hide-app">
+                	<div class="col-md-6">
+                    	<label>Want to cancel your subscription?
+                        	<i class="ic info info-hover">
+                                <span>Adding your credit card will allow your subscription to continue at the end of 
+                                the free trial period.<br />We will not charge your credit card until the free trial 
+                                ends (except for any SMS credits you purchase).</span>
+                            </i>
+                        </label>
+                        <a href="#">Cancel ZULU Subscription</a>
+                    </div>
+                    <div class="col-md-6 happens">
+                    	<label>What happens if you change your plan mid-billing cycle?
+                        	<i class="ic info info-hover">
+                                <span>Adding your credit card will allow your subscription to continue at the end of 
+                                the free trial period.<br />We will not charge your credit card until the free trial 
+                                ends (except for any SMS credits you purchase).</span>
+                            </i>
+                        </label>
+                    </div>
+               </div>
+           </div>
+            <div class="col-md-6 plan">
+            	<div class="form-group">
+                	<div class="col-md-6">
+                    	<h2>Change your plan
+                        	<i class="ic info info-hover bottom">
+                                <span>Adding your credit card will allow your subscription to continue at the end of 
+                                the free trial period.<br />We will not charge your credit card until the free trial 
+                                ends (except for any SMS credits you purchase).</span>
+                            </i>
+                        </h2>
+                        <p>Prices are in USD.</p>
+                    </div>
+                    <div class="col-md-6 plan-type">
+                        <select class="form-control">
+                        	<option>Monthly</option>
+                            <option>Yearly</option>
+                        </select>
+                    	<label>Plan Type</label>
+                    </div>
+                 </div>
+                 <div class="table-responsive">
+                 	<table class="table">
+                    	<thead>
+                        	<tr>
+                            	<th>Plan</th>
+                            	<th>Practitioners</th>
+                            	<th>Price</th>
+                            	<th>Select Plan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        	<tr>
+                            	<td><span>Solo</span></td>
+                                <td><span>1</span></td>
+                                <td><span>$45</span></td>
+                                <td><a href="" class="not-availble">Not Available</a></td>
+                            </tr>
+                            <tr>
+                            	<td><span>Solo</span></td>
+                                <td><span>1</span></td>
+                                <td><span>$45</span></td>
+                                <td><a href="" class="select-plan">Select Plan</a></td>
+                            </tr>
+                            <tr>
+                            	<td><span>Solo</span></td>
+                                <td><span>1</span></td>
+                                <td><span>$45</span></td>
+                                <td><strong>Current</strong></td>
+                            </tr>
+                            <tr>
+                            	<td><span>Solo</span></td>
+                                <td><span>1</span></td>
+                                <td><span>$45</span></td>
+                                <td><a href="" class="select-plan">Select Plan</a></td>
+                            </tr>
+                            <tr>
+                            	<td><span>Solo</span></td>
+                                <td><span>5</span></td>
+                                <td><span>$45</span></td>
+                                <td><a href="" class="select-plan">Select Plan</a></td>
+                            </tr>
+                            <tr>
+                            	<td><span>Solo</span></td>
+                                <td><span>8</span></td>
+                                <td><span>$55</span></td>
+                                <td><a href="" class="select-plan">Select Plan</a></td>
+                            </tr>
+                            <tr>
+                            	<td><span>Solo</span></td>
+                                <td><span>55</span></td>
+                                <td><span>$100</span></td>
+                                <td><a href="" class="select-plan">Select Plan</a></td>
+                            </tr>
+                            <tr>
+                            	<td><span>Solo</span></td>
+                                <td><span>100</span></td>
+                                <td><span>$450</span></td>
+                                <td><a href="" class="select-plan">Select Plan</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+            </div>
+        </div>
+    </form>
+</div>

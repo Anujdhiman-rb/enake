@@ -1,0 +1,163 @@
+<div class="dashboard-con settings">
+	<form ng-submit="settingSubmit(account)">
+    	<div class="top-container">
+            <div class="col-md-9 col-xs-6 top-links">
+                <div class="top-links-container" ng-include="'templates/settings/common/top-links.html'"></div>     
+            </div>
+            <div class="col-md-3 col-xs-6 top-btn">
+                <button class="save" type="submit">Save</button>
+                <button class="cancel" type="submit">Cancel</button>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 form-content" ng-scrollbar rebuild-on-resize>
+        	<div class="col-md-6">
+            	<h2 class="section-title">Account Information</h2>
+                  <div class="form-group">
+                    <label>Name of the Company</label>
+                    <input type="text" class="form-control" placeholder="HCL / Infosys / Pattraco" ng-model="account.company">
+                  </div>
+                  <div class="form-group">
+                    <label class="logo-com">Logo of the Company</label>
+                    <div class="img-con">
+                    	<img src="/assets/logo-img.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="form-group col-md-4 col-xs-6 name-con clearfix">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" placeholder="First Name" ng-model="account.fname">
+                  </div>
+                  <div class="form-group col-md-4 col-xs-6 name-con">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" placeholder="Last Name" ng-model="account.lname">
+                    <i class="ic user-icn info-hover">
+                    	<span>This is who we will get in touch with for 
+                        any administrative or billing related matters. 
+                        It is also who will receive any automated 
+                        administrative notifications from Cliniko 
+                        (ie. SMS credits are running low)</span>
+                    </i>
+                  </div>
+                  <div class="form-group clearfix">
+                    <label>Email Address</label>
+                    <input type="email" class="form-control" placeholder="Email" ng-model="account.email">
+                  </div>
+                  <div class="form-group check-con">
+                  	<h2 class="section-title">Permissions</h2>
+                    <div class="checkbox">
+                        <label>
+                          <input type="checkbox" ng-model="account.restrict_treatment"><span></span> Restrict viewing treatment notes and letters
+                        <p>Practitioners can only read treatment notes and letters they authored 
+                        themselves (administrators can see all still)</p>
+                        </label>
+                    </div>
+                    <div class="checkbox" ng-model="account.restrict_financial_detials">
+                        <label>
+                          <input type="checkbox"><span></span> Restrict viewing financial details
+                        <p>Practitioners cannot see any financial details</p>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                          <input type="checkbox" ng-model="account.allow_receptionist_patient_file"><span></span> Allow receptionists to view patient file attachments
+                        <p>Receptionists and power receptionists can view patient file attachments</p>
+                        </label>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-7 email-con p-name">
+                  	<h2 class="section-title">External Calendar Privacy </h2>
+                    <label>Patient Name Display
+                    	<i class="ic info info-hover">
+                        	<span>Select how your patient names will display in external 
+                            calendars like iCal, Google Calendar and Outlook.</span>
+                        </i>
+                    </label>
+                    <select class="form-control" ng-model="account.patient_name_display">
+                    	<option value="Full_Name">First Name</option>
+                      <option value="Full_Name">Full Name</option>
+                        <option value="Initials">Initials</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="col-md-6">
+            	<h2 class="section-title">Location</h2>
+                <div class="form-group">
+                    <label>Country</label>
+                    <select class="form-control" ng-model="account.location.country" >
+                    	<option ng-selected="" ng-repeat="countries in country" value="{{countries.code}}">{{countries.name}}</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Time Zone</label>
+                    <select class="form-control" ng-model="account.location.time_zone">
+                    	<option ng-repeat="timezones in timezone" value="{{timezones.offset}}">{{timezones.text}}</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-7 email-con">
+                  	<h2 class="section-title">Communication</h2>
+                    <label>Email from
+                    	<i class="ic info info-hover">
+                        	<span>This is the address that you email to patients from (eg. Appointment
+                             Reminders, Invoices, etc.). Patients may reply to this address, so it is 
+                             recommended to use the same that you use for enquiries.</span>
+                        </i>
+                    </label>
+                    <input type="email" class="form-control" placeholder="Email Address" ng-model="account.communication.email_from">
+                  </div>
+                  <div class="form-group col-md-4 email-con">
+                  	<h2>Terminology</h2>
+                    <label>Attendees 
+                    	<i class="ic info info-hover">
+                        	<span>We call people that attend appointments with us</span>
+                        </i>
+                    </label>
+                    <select class="form-control" ng-model="account.attends">
+                        <option value="patients">Patients</option>
+                        <option value="clients">Clients</option>
+                    </select>
+                  </div>
+                  	<h2>Appointment Calendar</h2>
+                  <div class="form-group col-xs-4 email-con time-con">
+                    <label>Time Slot Size</label>
+                    <select class="form-control" ng-model="account.timeslot.size">
+                    	<option ng-repeat="n in range(5,60,5)">{{n}}</option>
+                    </select>
+                    <span>minutes</span>
+                  </div>
+                  <div class="form-group col-xs-4 email-con time-con">
+                    <label>Time Slot Height</label>
+                    <select class="form-control" ng-model="account.timeslot.height">
+                    	<option ng-repeat="n in range(5,100)">{{n}}</option>
+                    </select>
+                    <span>pixels</span>
+                  </div>
+                  <div class="form-group col-md-12 email-con time-con range">
+                  	<h2>Appointment Calendar</h2>
+                    <label>Time Slot Size</label>
+                    <select class="form-control" ng-model="account.calender_range.from">
+                      <option ng-repeat="n in range(0,23)">{{n}}</option>
+                    	
+                    </select>
+                    <select class="form-control" ng-model="account.calender_range.to">
+                      <option ng-repeat="n in range(1,24)">{{n}}</option>
+                    	
+                    </select>
+                  </div>
+                  <div class="form-group check-con app">
+                    <div class="checkbox">
+                        <label>
+                          <input type="checkbox" ng-model="account.multiple_appointment"><span></span> Multiple appointments
+                            <p>Leave a small gap next to an appointment so that you can add additional 
+                            appointments at the same time.</p>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                          <input type="checkbox"  ng-model="account.show_current_time"><span></span> Show current time indicator
+                          <p>Show a line on the current day to indicate the time.</p>
+                        </label>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </form>
+</div>

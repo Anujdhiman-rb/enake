@@ -1,0 +1,176 @@
+<div class="dashboard-con settings">
+    <div class="top-container">
+        <div class="col-md-8 col-xs-6 top-links">
+            <div class="top-links-container" ng-include="'templates/settings/common/top-links.html'"></div>    
+        </div>
+        <div class="col-md-4 col-xs-6 top-btn">
+            <button class="save" type="submit">save</button>
+            <button class="cancel">Cancel</button>
+            <button class="cancel">Delete</button>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-2 bus-con">
+        <div class="col-md-2 side-bar-con">
+            <div class="side-bar">
+                <div class="side-bar-header">
+                    <h5>information</h5>
+                </div>
+                <div class="side-bar-links side-info" ng-scrollbar rebuild-on-resize>
+                	<ul>
+                    	<li>
+                        	<a href="">What are online <br />Bookings ? 
+                        		<i class="ic online-icn">
+                                	<span>Online bookings will help you let your patients book themselves in for 
+                                    appointments online. When enabled, you will be given a unique URL (web address) 
+                                    that you can link to from your website. This will link to an external Cliniko 
+                                    page designed specifically for your patients to book themselves in online.</span>
+                                </i>
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="">Do Patients need to <br />log in ? 
+                            	<i class="ic patients">
+                                	<span>They do not. Patients will enter basic information while booking the 
+                                    appointment and Cliniko will either create a new patient, or link the appointment 
+                                    to an existing patient if a match is found.</span>
+                                </i>
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="">How do i get <br />started ?
+                            <i class="ic how-to"> 
+                                	<span>Just tick the box below to turn on Online Bookings. Your unique URL (web address) 
+                                    will then appear below. We recommend creating a button on your website that links to 
+                                    this address (your webmaster can help with this). We recommend uploading a logo as well 
+                                    to personalise the page. We also suggest updating your Business Information as this will
+                                    appear on the online bookings page.</span>
+                                </i>
+                            </a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" col-md-10 col-sm-10 form-content info-container " ng-scrollbar rebuild-on-resize>
+    	<div class="col-md-6">
+        	<h2>ONLINE BOOKINGS</h2>
+            <div class="form-group check-con online show">
+                <label>Turn on Online Bookings</label>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> <p>Allow your Clients to book appointments online</p>
+                    </label>
+                </div>
+           </div>
+           <div class="form-group booking">
+                <label>Address to your Online bookings page</label>
+                <input type="url" class="form-control" placeholder="" value="https://hcl-infosystems.cliniko.com/settings/online_bookings">
+           </div>
+           <div class="form-group booking">
+                <label>Ga Code</label>
+                <input type="text" class="form-control" placeholder="e.g. UA-XXXXXXX-Y">
+           </div>
+           <div class="form-group booking clear">
+                <label>Maximum number of appointments to show per day segment</label>
+                <select class="form-control">
+                	<option>1</option>
+                </select>
+                <i class="ic info info-hover booking-info">
+                    <span>Show up to 1 appointments per day segment (morning, afternoon or evening)</span>
+                </i>
+           </div>
+            <div class="form-group check-con online show">
+                <label>Show price of service to patient</label>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> Show price
+                    </label>
+                </div>
+           </div>
+           <div class="form-group check-con online show">
+                <label>Hide appointment end time from patient
+                	<i class="ic info info-hover">
+                        <span>Useful if your appointment durations include some time at 
+                        the end of the session for yourself.</span>
+                    </i>
+                </label>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> Hide end time
+                    </label>
+                </div>
+           </div>
+           <div class="form-group check-con online show">
+                <label>Hide appointment end time from patient</label>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> Require address
+                    </label>
+                </div>
+           </div>
+        </div>
+    	<div class="col-md-6">
+        	<h2 class="blank">&nbsp;</h2>
+        	 <div class="form-group booking">
+                <label class="side-label">Minimum notice required for patients to cancel their own appointments
+                    <i class="ic info info-hover">
+                        <span>Patients can cancel their own appointment if you include a cancellation 
+                        link in your appointment communications.</span>
+                    </i>
+                </label>
+                <select class="form-control">
+                	<option>1 day</option>
+                </select>
+           </div>
+           <div class="form-group booking clear-it">
+                <label>Minimum advance time required for online bookings
+                    <i class="ic info info-hover">
+                        <span>This is the minimum amount of time between the current time, and the first 
+                        available time slot shown.</span>
+                    </i>
+                </label>
+                <select class="form-control">
+                	<option>1 hour</option>
+                </select>
+           </div>
+           <div class="form-group booking">
+                <label>Logo(png, jpg, jpeg & gif allowed)
+                    <i class="ic info info-hover">
+                        <span>Your logo will be automatically resized to 80px in height. Proportions will be kept.</span>
+                    </i>
+                    <div class="photo">
+                    	
+                    </div>
+                </label>
+           </div>
+           <div class="form-group booking clear-it">
+                <label>Booking notification
+                    <i class="ic info info-hover">
+                        <span>Notify the practitioner by  when an online booking is created.</span>
+                    </i>
+                </label>
+                <select class="form-control">
+                	<option>None</option>
+                </select>
+           </div>
+           <div class="form-group booking">
+                <label>Time selection information
+                    <i class="ic info info-hover">
+                        <span>This is displayed under the calendar when the visitor is choosing an appointment time.</span>
+                    </i>
+                </label>
+                <textarea class="form-control"></textarea>
+           </div>
+           <div class="form-group booking">
+                <label>Terms of use
+                    <i class="ic info info-hover">
+                        <span>If you enter terms, the patient will need to agree to these when booking 
+                        an appointment online.</span>
+                    </i>
+                </label>
+                <textarea class="form-control"></textarea>
+           </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<ul class="open-nav">
+                    <li><a href="">Settings</a></li>
+                    <li>/</li>
+                    <!-- <li><a href="">Account</a></li>
+                    <li>/</li> -->
+                    <li class="active"><a href="">{{$state.current.data.pageTitle}}</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right select-con">
+                   <li dropdown on-toggle="toggled(open)" class="select-account">
+                    <a href id="nav-user-dd" dropdown-toggle>
+                      <span class="nav-user">{{$state.current.data.pageTitle}}</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="nav-user-dd">
+                        <li><a ui-sref="settings"><span>Account</span></a></li>
+                        <li><a ui-sref="settings/business"><span>Business Information</span></a></li>
+                        <li><a ui-sref="settings/users"><span>Users & Practitioners</span></a></li>
+                        <li><a ui-sref="settings/online-booking"><span>Online Booking</span></a></li>
+                        <li><a ui-sref="settings/concession-types"><span>Concession Types</span></a></li>
+                        <li><a><span>Billable Items</span></a></li>
+                        <li><a><span>Appointment Types</span></a></li>
+                        <li><a ui-sref="settings/payment-types"><span>Payments Types</span></a></li>
+                        <li><a ui-sref="settings/taxes"><span>Taxes</span></a></li>
+                        <li><a href><span>Treatments Not Templates</span></a></li>
+                        <li><a ui-sref="settings/sms-setting"><span>SMS Setting</span></a></li>
+                        <li><a href><span>Zulu Subscription</span></a></li>
+                    </ul>
+                  </li>
+               </ul> 

@@ -1,0 +1,54 @@
+<div class="dashboard-con settings">
+    <div class="top-container">
+        <div class="col-md-8 col-xs-6 top-links">
+            <div class="top-links-container" ng-include="'templates/settings/common/top-links.html'"></div>    
+        </div>
+        <div class="col-md-4 col-xs-6 top-btn">
+            <button class="save" type="submit">Update</button>
+            <button class="cancel">Cancel</button>
+            <button class="cancel">Delete</button>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-2 bus-con">
+        <div class="col-md-2 side-bar-con">
+            <div class="side-bar">
+                <div class="side-bar-header">
+                    <h5>Recall Types</h5>
+                    <i class="ic bus-icn recell-icn"></i>
+                </div>
+                <div class="side-bar-search">
+                    <form>
+                        <input type="text" class="form-control" placeholder="Search" />
+                        <button type="submit" disabled="disabled"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="side-bar-links" ng-scrollbar rebuild-on-resize>
+                	<ul>
+                    	<li><a href="">Return</a></li>
+                    	<li><a href="">Return Visit</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" col-md-10 col-sm-10 form-content info-container " ng-scrollbar rebuild-on-resize>
+    	<div class="col-md-6">
+        	<h2>Return visit</h2>
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" placeholder="Return visit">
+              </div>
+              <div class="form-group col-md-12 time-con range recell">
+                <label>Recall in</label>
+                <select class="form-control" >
+                  <option>6</option>
+                </select>
+                <select class="form-control" >
+                  <option>Month(s)</option>
+                </select>
+              </div>
+        </div>
+    	<div class="col-md-6">
+        </div>
+    </div>
+</div>

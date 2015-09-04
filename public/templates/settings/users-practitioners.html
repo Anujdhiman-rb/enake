@@ -1,0 +1,1025 @@
+<div class="dashboard-con settings">
+    <div class="top-container">
+        <div class="col-md-9 col-xs-6 top-links">
+            <div class="top-links-container" ng-include="'templates/settings/common/top-links.html'"></div>     
+        </div>
+        <div class="col-md-3 col-xs-6 top-btn">
+            <button class="save" type="submit">Update</button>
+            <button class="cancel">Cancel</button>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-2 bus-con">
+        <div class="col-md-2 side-bar-con">
+            <div class="side-bar">
+                <div class="side-bar-header">
+                    <h5>Businesses Records</h5>
+                    <i class="ic bus-icn"></i>
+                </div>
+                <div class="side-bar-search">
+                    <form>
+                        <input type="text" class="form-control" placeholder="Search" />
+                        <button type="submit" disabled="disabled"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="side-bar-links">
+                	<ul>
+                    	<li><a href="">HCL Infosystems</a></li>
+                    	<li><a href="">Pattraco Ltd.</a></li>
+                    	<li><a href="" class="active">Johnson & Johnson Ltd.</a></li>
+                    	<li><a href="">Granules India Limited</a></li>
+                    	<li><a href="">Divis Laboratories Ltd.</a></li>
+                    	<li><a href="">HCL Infosystems</a></li>
+                    	<li><a href="">Pattraco Ltd.</a></li>
+                    	<li><a href="">Johnson & Johnson Ltd.</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" col-md-10 col-sm-10 form-content info-container" ng-scrollbar rebuild-on-resize rebuild-on="rebuild:me" > 
+    	<div class="col-md-6">
+        	<h2>Personal Details</h2>
+              <div class="form-group col-md-6 col-xs-6 name-con clearfix">
+                <label>First Name</label>
+                <input type="text" class="form-control" placeholder="First Name">
+              </div>
+              <div class="form-group col-md-6 col-xs-6 name-con">
+                <label>Last Name</label>
+                <input type="text" class="form-control" placeholder="Last Name">
+              </div>
+              <div class="form-group col-xs-4 city-con">
+                <label>TItle</label>
+                <select class="form-control">
+                    <option>Dr.</option>
+                    <option>Dummy</option>
+                    <option>Dummy</option>
+                </select>
+              </div>
+              <div class="form-group col-xs-8 city-con1">
+                <label>Phone Number</label>
+                <input type="text" class="form-control" placeholder="+91 00000-00000">
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" class="form-control" placeholder="john.key@gmail.com">
+              </div>
+              <div class="form-group">
+                <label>Time Zone
+                	<i class="ic info info-hover">
+                        <span>This is the address that you email to patients from (eg. Appointment
+                         Reminders, Invoices, etc.). Patients may reply to this address, so it is 
+                         recommended to use the same that you use for enquiries.</span>
+                    </i>
+                </label>
+                <select class="form-control">
+                    <option>Select</option>
+                    <option>Dummy</option>
+                    <option>Dummy</option>
+                </select>
+              </div>
+              <h2>Practitioner Information</h2>
+              <div class="remove-margin">
+                  <div class="form-group col-xs-4 city-con pra-info">
+                    <label>Type</label>
+                  </div>
+                  <div class="form-group col-xs-4 city-con pra-info">
+                    <label>Number</label>
+                  </div>
+                  <div class="form-group col-xs-4 city-con pra-info">
+                    <label>Business Name</label>
+                  </div>
+               </div>
+               <div class="clone" ng-repeat="parctitioners in parctitioner" ng-animate="'animate'">
+                  <div class="form-group col-xs-4 city-con pra-info">
+                    <input type="text"  class="form-control {{parctitioners.id}}" placeholder="400082"/>
+                  </div>
+                  <div class="form-group col-xs-4 city-con pra-info">
+                    <input type="text"  class="form-control {{parctitioners.id}}" placeholder="400082"/>
+                  </div>
+                  <div class="form-group col-xs-4 city-con pra-info">
+                    <select class="form-control">
+                        <option>Select</option>
+                        <option>Dummy</option>
+                        <option>Dummy</option>
+                    </select>
+                  </div>
+                  <div class="pra-icns">
+                <a href="" ng-click="removePractitioner($index)"><i class="ic cross"></i></a>
+              </div>
+              </div>
+              <div class="pra-icns">
+                <a href="" ng-click="newPractitioner()"><i class="ic add"></i></a>
+              </div>
+              <div class="form-group">
+                <label>Designation
+                    <i class="ic info info-hover">
+                        <span>This is the address that you email to patients from (eg. Appointment
+                         Reminders, Invoices, etc.). Patients may reply to this address, so it is 
+                         recommended to use the same that you use for enquiries.</span>
+                    </i>
+                </label>
+                <input type="text" class="form-control" placeholder="Businessman">
+               </div>
+               <div class="form-group description">
+                <label>Description</label>
+                <textarea class="form-control"></textarea>
+               </div>
+               <div class="form-group check-con online-booking">
+                <label>Online Bookings</label>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> Show this business in online bookings
+                    </label>
+                </div>
+              </div>
+               
+        </div>
+    	<div class="col-md-6">
+        	<h2 class="hv-info">Change Password
+            	<i class="ic info info-hover bottom">
+                    <span>This is the address that you email to patients from (eg. Appointment
+                     Reminders, Invoices, etc.). Patients may reply to this address, so it is 
+                     recommended to use the same that you use for enquiries.</span>
+                </i>
+            </h2>
+            <div class="form-group col-md-6 col-xs-6 name-con clearfix password">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Passrword">
+              </div>
+              <div class="form-group col-md-6 col-xs-6 name-con password">
+                <label>Password confirmation</label>
+                <input type="password" class="form-control" placeholder="Passrword">
+              </div>
+        	  <div class="form-group fac-con">
+                <label>2 Factor Authentication (Not enabled)
+                	<i class="ic info info-hover">
+                        <span>This is the address that you email to patients from (eg. Appointment
+                         Reminders, Invoices, etc.). Patients may reply to this address, so it is 
+                         recommended to use the same that you use for enquiries.</span>
+                    </i>
+                </label>
+                <a href="">Enable 2 factor Authentication</a>
+              </div>
+              <h2>Cliniko Settings</h2>
+              <div class="form-group col-md-7 col-xs-7 name-con clearfix">
+                <label>Is this person a practitioner?</label>
+                <input type="password" class="form-control" placeholder="Passrword">
+              </div>
+              <div class="form-group col-md-5 col-xs-5 name-con">
+                <label>User Account Active?</label>
+                <input type="password" class="form-control" placeholder="Passrword">
+              </div>
+              <h2>Select services that this practitioner provides</h2>
+              <div class="form-group check-con cate">
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> New Appointment Types (Category)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> First Appointment
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> Standard Appointment
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>Default Appointment Type</label>
+                    <select class="form-control">
+                        <option>Businessman</option>
+                        <option>Dummy</option>
+                        <option>Dummy</option>
+                    </select>
+               </div>
+               <div class="form-group notify-con">
+                    <label>Cancelled appointment notifications</label>
+                    <div class="notify">
+                    	<h3>Notify by</h3>
+                        <select class="form-control">
+                            <option>Email</option>
+                            <option>Dummy</option>
+                            <option>Dummy</option>
+                        </select>
+                    </div>
+                    <div class="appointment">
+                    	<h3>Only if the <br />appointment is within</h3>
+                        <select class="form-control">
+                            <option>7 days</option>
+                            <option>Dummy</option>
+                            <option>Dummy</option>
+                        </select>
+                    </div>
+               </div>
+               <div class="form-group online-booking">
+                <label>External Calendar
+                	<i class="ic info info-hover">
+                        <span>This is the address that you email to patients from (eg. Appointment
+                         Reminders, Invoices, etc.). Patients may reply to this address, so it is 
+                         recommended to use the same that you use for enquiries.</span>
+                    </i>
+                </label>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> Enable external calendar
+                    </label>
+                </div>
+              </div>
+           </div>
+        </div>
+        <div class="col-md-12 avail">
+        	<h2>Availability</h2>
+           <tabset>
+              <tab heading="HCL Infosystems (Chandigarh)">
+              	<div class="col-md-6">
+                	<div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Sunday</h6>
+                                <a href="" class="break" ng-click="NewBreak()">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="avail-master">
+                          <div class="abreak clearfix" ng-repeat="abreaks in abreak">
+                            <div class="col-xs-3">
+                                <a href="" class="remove" ng-click="RemoveBreak($index)">remove</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Monday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Tuesday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                	<div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Wednesday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Thursday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Friday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Saturday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </tab>
+              <tab heading="Imping (Chandigarh)">
+              	<div class="col-md-6">
+                	<div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Sunday</h6>
+                                <a href="" class="break" ng-click="NewBreak()">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="avail-master">
+                          <div class="abreak clearfix" ng-repeat="abreaks in abreak">
+                            <div class="col-xs-3">
+                                <a href="" class="remove" ng-click="RemoveBreak($index)">remove</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Monday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Tuesday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+              </tab>
+              <tab heading="Fortis (Mumbai)">
+              	<div class="col-md-6">
+                	<div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Sunday</h6>
+                                <a href="" class="break" ng-click="NewBreak()">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="avail-master">
+                          <div class="abreak clearfix" ng-repeat="abreaks in abreak">
+                            <div class="col-xs-3">
+                                <a href="" class="remove" ng-click="RemoveBreak($index)">remove</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Monday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Tuesday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                	<div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Wednesday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Thursday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Friday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                    	<div class="form-group check-con online-booking">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"><span></span>
+                                </label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-xs-10 avail-con">
+                    	<div class="avail-master">
+                            <div class="col-xs-3">
+                                <h6>Saturday</h6>
+                                <a href="" class="break">Break</a>
+                            </div>
+                            <div class="col-xs-9">
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span>To</span>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </tab>
+           </tabset>
+        </div>
+    </div>
+</div>

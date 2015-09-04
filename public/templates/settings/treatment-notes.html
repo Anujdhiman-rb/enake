@@ -1,0 +1,104 @@
+<div class="dashboard-con settings">
+    <div class="top-container">
+        <div class="col-md-7 col-xs-5 top-links">
+            <div class="top-links-container" ng-include="'templates/settings/common/top-links.html'"></div>    
+        </div>
+        <div class="col-md-5 col-xs-7 top-btn btn4">
+            <button class="save" type="submit">Edit</button>
+            <button class="save" type="submit">Update</button>
+            <button class="save" type="submit">Export</button>
+            <button class="cancel">Cancel</button>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-2 bus-con">
+        <div class="col-md-2 side-bar-con">
+            <div class="side-bar">
+                <div class="side-bar-header">
+                    <h5 class="with-two-icn">Treatment Notes</h5>
+                    <i class="ic bus-icn tre"></i>
+                    <i class="ic bus-icn tre-edit"></i>
+                </div>
+                <div class="side-bar-search">
+                    <form>
+                        <input type="text" class="form-control" placeholder="Search" />
+                        <button type="submit" disabled="disabled"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="side-bar-links" ng-scrollbar rebuild-on-resize>
+                	<ul>
+                    	<li><a href="">Initial Consultation</a></li>
+                    	<li><a href="">Standard Consultation</a></li>
+                    	<li><a href="">Initial Consultation</a></li>
+                    	<li><a href="">Standard Consultation</a></li>
+                    	<li><a href="">Initial Consultation</a></li>
+                    	<li><a href="">Standard Consultation</a></li>
+                    	<li><a href="">Initial Consultation</a></li>
+                    	<li><a href="">Standard Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" col-md-10 col-sm-10 form-content info-container " ng-scrollbar rebuild-on-resize>
+    	<div class="col-md-6 checkup">
+        	<h2>CheckUp</h2>
+              <div class="form-group">
+                <label>Presenting complaint</label>
+                <input type="text" class="form-control" placeholder="New Appointment Types">
+              </div>
+              <div class="form-group">
+                <label>Complaint history</label>
+                <textarea class="form-control" placeholder="Cavity"></textarea>
+              </div>
+              <div class="form-group medi">
+                <label>Medical history</label>
+                <div class="radio">
+                    <label>
+                      <input type="radio" name="medi"><span></span> Tooth Issues
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                      <input type="radio" name="medi"><span></span> Excepteur sint occaecat cupidatat non proident
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                      <input type="radio" name="medi"><span></span> Tooth Issues
+                    </label>
+                </div>
+              </div>
+        </div>
+    	<div class="col-md-6">
+        	<h2 class="blank">&nbsp;</h2>
+        	<div class="form-group check-con medi">
+                <label>Medication</label>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> 
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                      incididunt ut labore et dolore magna aliqua. </p>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> 
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                      incididunt ut labore et dolore magna aliqua. </p>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> 
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                      incididunt ut labore et dolore magna aliqua. </p>
+                    </label>
+                </div>
+              </div>
+              <div class="form-group treatment">
+                <label>Treatment</label>
+                <textarea class="form-control" placeholder="3 times a day - 3 tablets"></textarea>
+              </div>
+        </div>
+    </div>
+</div>

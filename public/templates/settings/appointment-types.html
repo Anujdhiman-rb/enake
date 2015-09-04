@@ -1,0 +1,132 @@
+<div class="dashboard-con settings">
+    <div class="top-container">
+        <div class="col-md-8 col-xs-6 top-links">
+            <div class="top-links-container" ng-include="'templates/settings/common/top-links.html'"></div>    
+        </div>
+        <div class="col-md-4 col-xs-6 top-btn">
+            <button class="save" type="submit">Update</button>
+            <button class="cancel">Cancel</button>
+            <button class="cancel">Delete</button>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-2 bus-con">
+        <div class="col-md-2 side-bar-con">
+            <div class="side-bar">
+                <div class="side-bar-header">
+                    <h5>Appointment Types</h5>
+                    <i class="ic bus-icn app-icn"></i>
+                </div>
+                <div class="side-bar-search">
+                    <form>
+                        <input type="text" class="form-control" placeholder="Search" />
+                        <button type="submit" disabled="disabled"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="side-bar-links app" ng-scrollbar rebuild-on-resize>
+                	<ul>
+                    	<li><a href="" class="active"><span></span>New Appointment</a></li>
+                    	<li><a href=""><span></span>First Appointment</a></li>
+                    	<li><a href=""><span></span>Standard Appointment</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" col-md-10 col-sm-10 form-content info-container " ng-scrollbar rebuild-on-resize>
+    	<div class="col-md-6">
+        	<h2>Editing New Appointment Types</h2>
+              <div class="form-group">
+                <label>Name
+                	<i class="ic info info-hover">
+                        <span>Useful if your appointment durations include some time at 
+                        the end of the session for yourself.</span>
+                    </i>
+                </label>
+                <input type="text" class="form-control" placeholder="New Appointment Types">
+              </div>
+              <div class="form-group">
+                <label>Description</label>
+                <input type="text" class="form-control" placeholder="Osteopathy, Physiotherapy, Psychology">
+              </div>
+              <div class="form-group col-xs-4 cat-con">
+                <label>Category
+               		<i class="ic info info-hover">
+                        <span>Useful if your appointment durations include some time at 
+                        the end of the session for yourself.</span>
+                    </i>
+                </label>
+                <input type="text" class="form-control" placeholder="Category">
+              </div>
+              <div class="form-group col-xs-8 cat-con">
+                <label>Duration in mins</label>
+                <select class="form-control">
+                   <option value="">30</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Default treatment note template</label>
+                <select class="form-control">
+                   <option value="">N/A</option>
+                </select>
+              </div>
+              <h2>Editing New Appointment Types</h2>
+               <div class="form-group check-con online">
+                <label>Select the practitioners that provide this service</label>
+                <div class="service">
+                    <div class="checkbox">
+                        <label>
+                          <input type="checkbox"><span></span> Deepak Kumar
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                          <input type="checkbox"><span></span> Kritika k
+                        </label>
+                    </div>
+                 </div>
+              </div>
+              
+        </div>
+    	<div class="col-md-6">
+        	<h2 class="blank">&nbsp;</h2>
+        	  <div class="form-group multiselect">
+                <label>Related product</label>
+                <select class="form-control">
+                   <option value="">N/A</option>
+                </select>
+              </div>
+              <div class="form-group multiselect">
+                <label>Related billable item</label>
+                <select class="form-control">
+                   <option value="">N/A</option>
+                </select>
+              </div>
+              <div class="form-group color-picker">
+                <label>Select appointment type color<span></span></label>
+              </div>
+              <div class="form-group check-con online">
+                <label>Appointment Reminders</label>
+                <div class="checkbox rem">
+                    <label>
+                      <input type="checkbox"><span></span> Send booking confirmation email. These Emails are sent 
+                      out as soon as the appointment is booked.
+                    </label>
+                </div>
+                <div class="checkbox rem">
+                    <label>
+                      <input type="checkbox"><span></span> Send appointment reminder. This reminder can be set up in 
+                      <a href="">Appointment Reminders.</a>
+                    </label>
+                </div>
+              </div>
+              <div class="form-group check-con online">
+                <label>Show in online bookings</label>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span>  This appointment type will be shown in online bookings.
+                    </label>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

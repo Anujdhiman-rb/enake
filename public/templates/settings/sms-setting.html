@@ -1,0 +1,68 @@
+<div class="dashboard-con settings">
+	<form ng-submit="settingSubmit(account)">
+    	<div class="top-container">
+            <div class="col-md-9 col-xs-6 top-links">
+                <div class="top-links-container" ng-include="'templates/settings/common/top-links.html'"></div>     
+            </div>
+            <div class="col-md-3 col-xs-6 top-btn">
+                <button class="save" type="submit">Save</button>
+                <button class="cancel" type="submit">Cancel</button>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 form-content" ng-scrollbar rebuild-on-resize>
+        	<div class="col-md-6">
+            	<h2 class="section-title">General</h2>
+                <div class="form-group booking clear-it">
+                    <label>Purchase reminder level
+                        <i class="ic info info-hover">
+                            <span>When your SMS Credits Remaining falls below this amount, we will send you an email 
+                            reminder to purchase some more.</span>
+                        </i>
+                    </label>
+                    <select class="form-control">
+                        <option>100</option>
+                        <option>200</option>
+                        <option>300</option>
+                    </select>
+               </div>
+               <div class="form-group">
+                <label>Forward patient SMS replies to your phone
+               			<i class="ic info info-hover">
+                            <span>Enter your mobile number. Forwarded replies cost 1 SMS credit.</span>
+                        </i>
+                </label>
+                <input type="text" class="form-control" placeholder="00000-00000">
+              </div>
+              <div class="form-group">
+                <label>Forward patient SMS replies to your email
+               			<i class="ic info info-hover">
+                            <span>Enter your email address. There is no charge for forwarded emails.</span>
+                        </i>
+                </label>
+                <input type="email" class="form-control" placeholder="Email Address">
+              </div>
+            </div>
+            <div class="col-md-6">
+            	<div class="sms-con">
+                	<h4>SMS credit Remaining</h4>
+                    <strong>5</strong>
+                    <h4>Purchase SMS Credits</h4>
+                    <div class="sms-btns">
+                    	<a href="">500 credits. $50</a>
+                        <a href="">1000 credits. $100</a>
+                        <a href="">5000 credits. $500</a>
+                    </div>
+                    <h5>All prices are in USD.</h5>
+					<h5>Purchases are immediately charged to your credit card.</h5>
+                </div>
+            </div>
+            <div class="confirm">
+                <h3>Confirmation</h3>
+                <p>Continuing will immediately charge $50 USD to your registered credit card. SMS Credits are not refundable. 
+                Please confirm you wish to continue.</p>
+                <a href="">confirm</a>
+                <a href="">cancel</a>
+            </div>
+        </div>
+    </form>
+</div>

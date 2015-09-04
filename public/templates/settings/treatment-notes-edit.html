@@ -1,0 +1,237 @@
+<div class="dashboard-con settings">
+    <div class="top-container">
+        <div class="col-md-7 col-xs-5 top-links">
+            <div class="top-links-container" ng-include="'templates/settings/common/top-links.html'"></div>    
+        </div>
+        <div class="col-md-5 col-xs-7 top-btn btn4">
+            <button class="save" type="submit">Edit</button>
+            <button class="save" type="submit">Update</button>
+            <button class="save" type="submit">Export</button>
+            <button class="cancel">Cancel</button>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-2 bus-con">
+        <div class="col-md-2 side-bar-con">
+            <div class="side-bar">
+                <div class="side-bar-header">
+                    <h5 class="with-two-icn">Treatment Notes</h5>
+                    <i class="ic bus-icn tre"></i>
+                    <i class="ic bus-icn tre-edit"></i>
+                </div>
+                <div class="side-bar-search">
+                    <form>
+                        <input type="text" class="form-control" placeholder="Search" />
+                        <button type="submit" disabled="disabled"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="side-bar-links" ng-scrollbar rebuild-on-resize>
+                	<ul>
+                    	<li><a href="">Initial Consultation</a></li>
+                    	<li><a href="">Standard Consultation</a></li>
+                    	<li><a href="">Initial Consultation</a></li>
+                    	<li><a href="">Standard Consultation</a></li>
+                    	<li><a href="">Initial Consultation</a></li>
+                    	<li><a href="">Standard Consultation</a></li>
+                    	<li><a href="">Initial Consultation</a></li>
+                    	<li><a href="">Standard Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" col-md-10 col-sm-10 form-content info-container quest-area "   >
+    	<div class="col-md-6 checkup">
+        	<h2 class="remove-bottom">Editing Initial Consultation</h2>
+              <div class="form-group">
+                <label>Template Name</label>
+                <input type="text" class="form-control" placeholder="Intial Consultation">
+              </div>
+             <div class="form-group print-title">
+             	<h2 class="remove-top">Print Settings</h2>
+                <input type="text" class="form-control" placeholder="Title">
+              </div>
+              <div class="form-group check-con patient-detail">
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> Show the patient’s address
+                    </label>
+                </div>
+             </div>
+             <div class="form-group check-con patient-detail">
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> Show the patient’s date of birth
+                    </label>
+                </div>
+             </div>
+             <div class="form-group check-con patient-detail">
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> Show the patient’s medicare #
+                    </label>
+                </div>
+             </div>
+             <div class="form-group check-con patient-detail">
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><span></span> Show the patient’s occupation
+                    </label>
+                </div>
+             </div>
+        </div>
+    	<div class="col-md-6 treatment-con">
+            <h3>Treatment Notes</h3>
+            <div class="qust-sec">
+            	<label>Section</label>
+                <input type="text" class="form-control prob" placeholder="Problem" />
+                <a href="" class="remove-btn"><i class="ic cross"></i> Remove</a>
+                <a href="" class="add-btn"><i class="ic add"></i> Add</a>
+                <div class="add-con">
+            		<a href=""><i class="ic add"></i> Add Question</a>
+                </div>
+                <div class="problem-con">
+                	<div class="form-group">
+                        <label>Question</label>
+                        <input type="text" class="form-control" placeholder="What is the problem?">
+                    </div>
+                    <div class="form-group">
+                        <label>&nbsp;</label>
+                        <select class="form-control">
+                        	<option>Text</option>
+                            <option>Paragraph</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Answer</label>
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="qust-sec">
+            	<label>Section</label>
+                <input type="text" class="form-control prob" placeholder="Problem" />
+                <a href="" class="remove-btn"><i class="ic cross"></i> Remove</a>
+                <a href="" class="add-btn"><i class="ic add"></i> Add</a>
+                <div class="add-con">
+            		<a href=""><i class="ic add"></i> Add Question</a>
+                </div>
+                <div class="problem-con">
+                	<div class="form-group">
+                        <label>Question</label>
+                        <input type="text" class="form-control" placeholder="What is the problem?">
+                    </div>
+                    <div class="form-group">
+                        <label>&nbsp;</label>
+                        <select class="form-control">
+                        	<option>Text</option>
+                            <option>Paragraph</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Answer</label>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="qust-sec">
+            	<label>Section</label>
+                <input type="text" class="form-contro probl" placeholder="Problem" />
+                <a href="" class="remove-btn"><i class="ic cross"></i> Remove</a>
+                <a href="" class="add-btn"><i class="ic add"></i> Add</a>
+                <div class="add-con">
+            		<a href=""><i class="ic add"></i> Add Question</a>
+                </div>
+                <div class="problem-con">
+                	<div class="form-group">
+                        <label>Question</label>
+                        <input type="text" class="form-control" placeholder="What is the problem?">
+                    </div>
+                    <div class="form-group">
+                        <label>&nbsp;</label>
+                        <select class="form-control">
+                        	<option>Text</option>
+                            <option>Paragraph</option>
+                            <option>Multiple Choice</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Answer</label>
+                        <div class="form-group medi radio-con">
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="medi"><span></span> <input type="text" class="form-control" />
+                                  <a href=""><i class="ic cross"></i></a>
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="medi"><span></span> <input type="text" class="form-control" />
+                                  <a href=""><i class="ic cross"></i></a>
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                  <input type="radio" name="medi"><span></span> <input type="text" class="form-control" />
+                                  <a href=""><i class="ic cross"></i></a>
+                                </label>
+                            </div>
+                            <div class="add-con add-answer">
+                                <a href=""><i class="ic add"></i> Add answer</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="qust-sec">
+            	<label>Section</label>
+                <input type="text" class="form-control prob" placeholder="Problem" />
+                <a href="" class="remove-btn"><i class="ic cross"></i> Remove</a>
+                <a href="" class="add-btn"><i class="ic add"></i> Add</a>
+                <div class="add-con">
+            		<a href=""><i class="ic add"></i> Add Question</a>
+                </div>
+                <div class="problem-con">
+                	<div class="form-group">
+                        <label>Question</label>
+                        <input type="text" class="form-control" placeholder="What is the problem?">
+                    </div>
+                    <div class="form-group">
+                        <label>&nbsp;</label>
+                        <select class="form-control">
+                        	<option>Text</option>
+                            <option>Paragraph</option>
+                            <option>Multiple Choice</option>
+                            <option>Checkboxes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Answer</label>
+                        <div class="form-group medi radio-con">
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" name="medi"><span></span> <input type="text" class="form-control" />
+                                  <a href=""><i class="ic cross"></i></a>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" name="medi"><span></span> <input type="text" class="form-control" />
+                                  <a href=""><i class="ic cross"></i></a>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" name="medi"><span></span> <input type="text" class="form-control" />
+                                  <a href=""><i class="ic cross"></i></a>
+                                </label>
+                            </div>
+                            <div class="add-con add-answer">
+                                <a href=""><i class="ic add"></i> Add answer</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

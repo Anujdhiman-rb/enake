@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="clinikoApp">
+	<head>
+	  <title ng-bind="$state.current.data.pageTitle"></title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body ng-controller="MainCntl">
+		<header class="top-header ng-hide no-animate" ng-include="'templates/common/header.html'"  ng-show="isLoggedIn"></header>
+		<header class="navbar-twitch ng-hide no-animate" ng-include="'templates/common/alide.html'" ng-show="isLoggedIn"></header>
+		<div class="container-fluid main-content" ng-class="{'Login' : !isLoggedIn}">
+			<div class="row">
+					<div ui-view="" id="ng-view" class="slide-animation">
+						 <%= yield %>
+					</div>
+			</div>
+		</div>
+	</body>
+</html>
